@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Haven Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">🍰 Sweet Haven</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#treats">Treats</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Sweet Haven Bakery</h1>
+      <p>Freshly baked delights made with love every day.</p>
+      <button class="btn" onclick="scrollToSection('treats')">Explore Treats</button>
+    </div>
+  </section>
+
+  <!-- Treats Section -->
+  <section id="treats" class="section">
+    <h2>Our Delicious Treats</h2>
+    <div class="treats-container">
+      <div class="treat-card fade-in">
+        <img src="https://images.unsplash.com/photo-1587241321921-91e5e8e8f1da" alt="Chocolate Croissant" />
+        <h3>Chocolate Croissant</h3>
+        <p>Flaky, buttery pastry filled with rich chocolate.</p>
+      </div>
+      <div class="treat-card fade-in">
+        <img src="https://images.unsplash.com/photo-1590080875831-3b6b1b5d29a6" alt="Cinnamon Roll" />
+        <h3>Cinnamon Roll</h3>
+        <p>Soft, sweet roll swirled with cinnamon and icing.</p>
+      </div>
+      <div class="treat-card fade-in">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Fruit Tart" />
+        <h3>Fruit Tart</h3>
+        <p>Crispy crust filled with cream and fresh seasonal fruits.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about fade-in">
+    <h2>About Us</h2>
+    <p>
+      At <strong>Sweet Haven Bakery</strong>, we believe every bite should bring joy. 
+      Our bakers use only the finest ingredients to craft pastries, cakes, and breads 
+      that warm the heart and satisfy the soul. Whether it’s your morning croissant or 
+      a custom cake for your celebration — we bake happiness fresh every day!
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact fade-in">
+    <h2>Get in Touch</h2>
+    <div class="contact-info">
+      <p>📧 info@sweethavenbakery.com</p>
+      <p>📞 (555) 123-4567</p>
+      <p>📍 123 Main St, Pleasantville</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Sweet Haven Bakery | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

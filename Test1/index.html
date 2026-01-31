@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accurate Meter</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- (optional) Firebase if you want live data -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script> -->
+</head>
+<body>
+  <h1>Accurate Meter Gauge</h1>
+
+  <div class="card">
+    <div id="tempGauge" class="gauge-card">
+      <!-- JS will inject the gauge here -->
+    </div>
+
+    <div class="controls">
+      <label for="val">Value:</label>
+      <input id="val" type="range" min="0" max="100" value="42"/>
+      <output id="valOut">42</output><span class="unit">°C</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Create a gauge with clear min/max, ticks and thresholds
+    const temp = new SemiGauge({
+      mountId: "tempGauge",
+      title: "Temperature",
+      unit: "°C",
+      min: 0,
+      max: 100,
+      majorStep: 20,
+      minorStep: 10,
+      warnAt: 70,     // yellow zone start
+      dangerAt: 90    // red zone start
+    });
+
+    // demo control (replace wi
